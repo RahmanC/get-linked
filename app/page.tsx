@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 min-h-screen">
-      <img src="./Purple-Lens-Flare.png" />
-    </main>
+    <div>
+      <Hero />
+    </div>
   );
 }

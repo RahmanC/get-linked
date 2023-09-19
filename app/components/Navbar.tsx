@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import Image from "next/image";
 import { NavItem } from "../../types/types";
+import Button from "./Button";
 
 const NAV_ITEMS: Array<NavItem> = [
   {
@@ -31,7 +32,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   return (
-    <header className="w-full px-[3rem] md:px-auto pt-[2.124rem] pb-[1.3125] md:pt-[4.1875rem] md:pb-[1.875rem] sm:px-20 fixed top-0 z-50 border-b border-[#ffffff] border-opacity-[18%]">
+    <header className="w-full px-[2.5rem] md:px-auto pt-[2.124rem] pb-[1.3125] md:pt-[4.1875rem] md:pb-[1.875rem] sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] h-[141px]">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-2 md:py-1 md:block">
@@ -45,9 +46,9 @@ export default function Navbar() {
                 />
               </div>
             </ScrollLink>
-            <div className="md:hidden">
+            <div className="md:hidden ">
               <div
-                className="p-2 text-gray-700 rounded-md outline-none cursor-pointer"
+                className="p-2  text-gray-700 rounded-md outline-none cursor-pointer"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -60,11 +61,11 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div>
+        <div className=" bg-[#150E28] px-[2rem] md:px-0 rounded-[8px]">
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
               navbar ? "block" : "hidden"
-            }`}
+            } `}
           >
             <div className="items-start md:items-center justify-center space-y-8 flex flex-col  md:flex-row md:space-x-[3.5rem] md:space-y-0 cursor-pointer">
               {NAV_ITEMS.map((item, idx) => {
@@ -86,16 +87,7 @@ export default function Navbar() {
                   </ScrollLink>
                 );
               })}
-              <Link
-                href="/register"
-                className=" rounded-[4px] px-[3.25rem] py-[1rem] text-[1rem] font-[400]"
-                style={{
-                  background:
-                    "linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)",
-                }}
-              >
-                Register
-              </Link>
+              <Button label="Register" link="/register" />
             </div>
           </div>
         </div>
