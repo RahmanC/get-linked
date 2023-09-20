@@ -5,6 +5,7 @@ import Judge from "@/components/Judge";
 import Faq from "@/components/Faq";
 import Timeline from "@/components/Timeline";
 import Reward from "@/components/Reward";
+import Partners from "@/components/Partners";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Faq />
       <Timeline />
       <Reward />
+      <Partners />
     </div>
   );
 }
