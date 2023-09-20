@@ -11,4 +11,14 @@ export interface Button {
 export interface Criteria {
   label: string;
   value: string;
+  date?: string;
+  id?: number;
+}
+
+export interface FaqItem {
+  switchFaq: (faq: number) => void;
+  activeFaq: number;
+  index: number;
+  label: string;
+  value: string;
 }

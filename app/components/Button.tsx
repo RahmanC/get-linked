@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Button } from "../../types/types";
+import { Button } from "../types/types";
 
 const Button = ({ label, link }: Button) => {
   return (

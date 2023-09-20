@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import Image from "next/image";
-import { NavItem } from "../../types/types";
+import { NavItem } from "../types/types";
 import Button from "./Button";
 
 const NAV_ITEMS: Array<NavItem> = [
@@ -32,7 +32,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   return (
-    <header className="w-full px-[2.5rem] md:px-auto pt-[2.124rem] pb-[1.3125] md:pt-[4.1875rem] md:pb-[1.875rem] sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] h-[141px]">
+    <header className="w-full px-[2.5rem] md:px-auto py-[2.124rem] md:py-[2.124rem]  sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] h-[18vh]">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-2 md:py-1 md:block">
