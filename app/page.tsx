@@ -4,6 +4,7 @@ import Rules from "@/components/Rules";
 import Judge from "@/components/Judge";
 import Faq from "@/components/Faq";
 import Timeline from "@/components/Timeline";
+import Reward from "@/components/Reward";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Judge />
       <Faq />
       <Timeline />
+      <Reward />
     </div>
   );
 }
