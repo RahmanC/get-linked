@@ -6,6 +6,7 @@ import Faq from "@/components/Faq";
 import Timeline from "@/components/Timeline";
 import Reward from "@/components/Reward";
 import Partners from "@/components/Partners";
+import Privacy from "@/components/Privacy";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Timeline />
       <Reward />
       <Partners />
+      <Privacy />
     </div>
   );
 }
