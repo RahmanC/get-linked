@@ -55,8 +55,8 @@ export const AppField: FC<AppFieldProps> = ({
             <option value="">{selectHolder}</option>
             {options &&
               options.map((option, index) => (
-                <option key={index} value={option}>
-                  {option}
+                <option key={index} value={option.id}>
+                  {option.name}
                 </option>
               ))}
           </select>

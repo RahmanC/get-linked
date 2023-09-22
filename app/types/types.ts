@@ -7,7 +7,7 @@ export interface Button {
   label: string;
   link?: string;
   customStyle?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 export interface Criteria {
@@ -25,6 +25,10 @@ export interface FaqItem {
   value: string;
 }
 
+interface Option {
+  name: string;
+  id: number;
+}
 export interface AppFieldProps {
   name: string;
   value: string;
@@ -34,7 +38,7 @@ export interface AppFieldProps {
   textArea?: boolean;
   label?: string;
   select?: boolean;
-  options?: string[];
+  options?: Option[];
   selectHolder?: string;
   error?: string;
 }

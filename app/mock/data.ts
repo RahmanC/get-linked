@@ -122,3 +122,5 @@ export const useFulLinks = [
     link: "/register",
   },
 ];
+
+export const baseUrl = "https://backend.getlinked.ai/hackathon";

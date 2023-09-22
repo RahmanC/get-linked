@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { AppField } from "../appForm/AppField";
 import Button from "../Button";
 import Modal from "../Modal";
+import axios from "axios";
+import { baseUrl } from "@/mock/data";
+import Error from "../appForm/Error";
 
 const Form = () => {
   const [category, setCategory] = useState("");
@@ -15,9 +18,12 @@ const Form = () => {
   const [topic, setTopic] = useState("");
   const [terms, setTerms] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [networkError, setNetworkError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [categoryList, setCategoryList] = useState([]);
   const [error, setError] = React.useState({
     category: "",
-    size: "",
     email: "",
     phone: "",
     teamName: "",
@@ -25,48 +31,81 @@ const Form = () => {
     terms: "",
   });
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    if (!email) {
-      setError((prevS) => ({ ...prevS, email: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, email: "" }));
+  // clear network error after 10secs
+  useEffect(() => {
+    if (!!networkError) {
+      const timer = setTimeout(() => {
+        setNetworkError("");
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [networkError]);
+
+  const fetchCategories = async () => {
+    try {
+      const response = await axios.get(`${baseUrl}/categories-list`);
+      setCategoryList(response.data);
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const handleSubmit = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+
+    const validateField = (fieldName: string, value: any) => {
+      if (!value) {
+        setError((prevS) => ({ ...prevS, [fieldName]: "required" }));
+      } else {
+        setError((prevS) => ({ ...prevS, [fieldName]: "" }));
+      }
+    };
+
+    validateField("email", email);
+    validateField("category", category);
+    validateField("phone", phone);
+    validateField("teamName", teamName);
+    validateField("topic", topic);
+    validateField("terms", terms);
+
+    let validation =
+      email && teamName && phone && topic && category && size && terms;
+
+    const apiData = {
+      email: email,
+      team_name: teamName,
+      phone_number: phone,
+      project_topic: topic,
+      category: category,
+      group_size: size,
+      privacy_poclicy_accepted: terms,
+    };
+
+    if (!validation) {
+      setIsLoading(false);
+      return;
     }
 
-    if (!category) {
-      setError((prevS) => ({ ...prevS, category: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, category: "" }));
-    }
+    setIsLoading(true);
+    try {
+      const response = await axios.post(`${baseUrl}/registration`, apiData);
 
-    if (!size) {
-      setError((prevS) => ({ ...prevS, size: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, size: "" }));
-    }
+      let success = response.status == 201;
+      if (success) {
+        setIsLoading(false);
+        setIsOpen(true);
+      }
+    } catch (error: any) {
+      setIsLoading(false);
 
-    if (!phone) {
-      setError((prevS) => ({ ...prevS, phone: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, phone: "" }));
-    }
-
-    if (!teamName) {
-      setError((prevS) => ({ ...prevS, teamName: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, teamName: "" }));
-    }
-
-    if (!topic) {
-      setError((prevS) => ({ ...prevS, topic: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, topic: "" }));
-    }
-
-    if (!terms) {
-      setError((prevS) => ({ ...prevS, terms: "required" }));
-    } else {
-      setError((prevS) => ({ ...prevS, terms: "" }));
+      setNetworkError(error.response.data.email?.[0]);
     }
   };
   return (
@@ -84,6 +123,9 @@ const Form = () => {
         create your account
       </p>
       <div className="my-9 md:w-[558px]">
+        <div className="flex items-center justify-center">
+          {networkError && <Error error={networkError} />}
+        </div>
         <form className="flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <AppField
@@ -97,7 +139,7 @@ const Form = () => {
 
             <AppField
               label="Phone"
-              name="phone"
+              name="phone_number"
               value={phone}
               setText={setPhone}
               placeholder="Enter your phone number"
@@ -114,7 +156,7 @@ const Form = () => {
             />
             <AppField
               label="Project Topic"
-              name="topic"
+              name="project_topic"
               value={topic}
               setText={setTopic}
               placeholder="What is your group project topic"
@@ -127,18 +169,21 @@ const Form = () => {
               value={category}
               setText={setCategory}
               selectHolder="Select your category"
-              options={["Automation", "Software Development"]}
+              options={categoryList}
               error={error.category}
             />
             <AppField
               label="Group Size"
-              name="size"
+              name="group_size"
               select={true}
               value={size}
               setText={setSize}
               selectHolder="Select"
-              options={["10", "20"]}
-              error={error.size}
+              options={[
+                { name: "5", id: 5 },
+                { name: "10", id: 10 },
+                { name: "20", id: 20 },
+              ]}
             />
           </div>
           <p className="text-[0.5625rem] md:text-xs text-[#FF26B9] italic font-normal mt-6 mb-4">
@@ -161,7 +206,7 @@ const Form = () => {
           <Button
             customStyle="w-full mt-6"
             onClick={handleSubmit}
-            label="Register Now"
+            label={isLoading ? "please wait..." : "Register Now"}
           />
         </form>
       </div>
@@ -184,7 +229,10 @@ const Form = () => {
           <Button
             label="Back"
             customStyle="w-full my-7"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              window.location.href = "/";
+              setIsOpen(!isOpen);
+            }}
           />
         </div>
       </Modal>
