@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <main className="relative flex flex-1 justify-center items-center min-h-screen mt-[18vh] min-w-screen">
+    <main className="relative flex flex-1 justify-center items-center min-h-screen min-w-screen">
       <Image src="/Purple-Lens-Flare.png" alt="lens-flare" layout="fill" />
 
       <div className="flex flex-col mt-[2rem]">

@@ -24,20 +24,33 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Contact",
-    path: "contact",
+    path: "/contact",
   },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
+  console.log("path", pathname);
   const [navbar, setNavbar] = useState(false);
+
+  // Function to check if a path contains a slash
+  const hasSlash = (path: string) => path.includes("/");
+
   return (
-    <header className="w-full px-[2.5rem] md:px-auto py-[2.124rem] md:py-[2.124rem]  sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] h-[18vh]">
+    <header
+      className={`${
+        pathname === "/contact" && "hidden md:block"
+      } w-full px-[2.5rem] md:px-auto py-[2.124rem] md:py-[2.124rem]  sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] `}
+    >
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-2 md:py-1 md:block">
             <ScrollLink to="/">
-              <div className="container flex items-center space-x-2 cursor-pointer">
+              <div
+                className={`${
+                  navbar && "hidden"
+                } container flex items-center space-x-2 cursor-pointer`}
+              >
                 <Image
                   src="/logo.png"
                   width={100}
@@ -69,13 +82,19 @@ export default function Navbar() {
           >
             <div className="items-start md:items-center justify-center space-y-8 flex flex-col  md:flex-row md:space-x-[3.5rem] md:space-y-0 cursor-pointer">
               {NAV_ITEMS.map((item, idx) => {
-                return (
+                const linkComponent = hasSlash(item.path) ? (
+                  // Use Next.js Link
+                  <Link
+                    href={item.path}
+                    className={`block lg:inline-block text-[1rem] font-[400] text-[#ffffff] transition-all duration-500 hover:scale-110 hover:bg-background hover:bg-clip-text hover:text-transparent`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  // Use react-scroll ScrollLink
                   <ScrollLink
-                    key={idx}
                     to={item.path}
-                    className={
-                      "block lg:inline-block text-[1rem] font-[400] text-[#ffffff]  hover:text-neutral-500 "
-                    }
+                    className={`block lg:inline-block text-[1rem] font-[400] text-[#ffffff]transition-all duration-500 hover:scale-110 hover:bg-background hover:bg-clip-text hover:text-transparent`}
                     activeClass="active"
                     spy={true}
                     smooth={true}
@@ -86,7 +105,10 @@ export default function Navbar() {
                     {item.label}
                   </ScrollLink>
                 );
+
+                return <div key={idx}>{linkComponent}</div>;
               })}
+
               <Button label="Register" link="/register" />
             </div>
           </div>

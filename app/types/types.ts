@@ -22,3 +22,12 @@ export interface FaqItem {
   label: string;
   value: string;
 }
+
+export interface AppFieldProps {
+  name: string;
+  value: string;
+  type?: string;
+  placeholder?: string;
+  setText: (text: string) => void;
+  textArea?: boolean;
+}
