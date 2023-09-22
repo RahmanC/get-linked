@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { AppField } from "../appForm/AppField";
 import Button from "../Button";
-import Link from "next/link";
+import Modal from "../Modal";
 
 const Form = () => {
   const [category, setCategory] = useState("");
@@ -14,6 +14,7 @@ const Form = () => {
   const [teamName, setTeam] = useState("");
   const [topic, setTopic] = useState("");
   const [terms, setTerms] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleSubmit = () => {};
   return (
@@ -106,6 +107,29 @@ const Form = () => {
           />
         </form>
       </div>
+
+      <Modal showModal={isOpen}>
+        <div className="flex flex-col items-center justify-center ">
+          <img src="/congratulation.svg" alt="congrats" />
+          <p className="flex flex-col text-center text-[1rem] md:text-[2rem] font-[600] my-7">
+            Congratulations <span>you have successfully Registered!</span>
+          </p>
+          <p className="text-xs md:text-sm font-[500] md:font-[600]">
+            Yes, it was easy and you did it!
+          </p>
+          <p className="flex items-center gap-2 text-xs md:text-sm font-[500] md:font-[600]">
+            check your mail box for next step{" "}
+            <span>
+              <img src="/emoji.svg" alt="emoji" />
+            </span>{" "}
+          </p>
+          <Button
+            label="Back"
+            customStyle="w-full my-7"
+            onClick={() => setIsOpen(!isOpen)}
+          />
+        </div>
+      </Modal>
     </div>
   );
 };

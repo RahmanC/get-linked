@@ -37,3 +37,9 @@ export interface AppFieldProps {
   options?: string[];
   selectHolder?: string;
 }
+
+export interface Modal {
+  showModal: boolean;
+  children: React.ReactNode;
+  onClose?: () => void;
+}
