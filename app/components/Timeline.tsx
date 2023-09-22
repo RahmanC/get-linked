@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import { timelineMock } from "@/mock/data";
 
 const Timeline = () => {

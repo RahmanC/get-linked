@@ -17,7 +17,7 @@ const Form = () => {
   return (
     <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl bg-transparent p-0 md:p-[5.625rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full md:w-[38.5625rem]">
       <Link href="/">
-        <img src="/back.svg" alt="go back" className="md:hidden my-8" />
+        <img src="/back.svg" alt="go back" className="md:hidden mb-8" />
       </Link>
       <p className="text-[#D434FE] w-[197px] md:w-auto text-xl font-[600]">
         Questions or need assistance?
@@ -30,7 +30,7 @@ const Form = () => {
         Email us below to any question related to our event
       </p>
       <div className="my-9">
-        <form>
+        <form className="flex flex-col space-y-4">
           <div className="hidden md:block">
             <AppField
               name="first_name"
@@ -69,7 +69,7 @@ const Form = () => {
             placeholder="Message"
             textArea={true}
           />
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             <Button link="" label="Submit" />
           </div>
         </form>

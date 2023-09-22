@@ -5,7 +5,9 @@ export interface NavItem {
 
 export interface Button {
   label: string;
-  link: string;
+  link?: string;
+  customStyle?: string;
+  onClick?: () => void;
 }
 
 export interface Criteria {
@@ -30,4 +32,8 @@ export interface AppFieldProps {
   placeholder?: string;
   setText: (text: string) => void;
   textArea?: boolean;
+  label?: string;
+  select?: boolean;
+  options?: string[];
+  selectHolder?: string;
 }

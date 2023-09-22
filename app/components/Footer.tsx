@@ -5,10 +5,17 @@ import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll/modules";
 import { useFulLinks } from "@/mock/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
   return (
-    <section className=" flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max">
+    <section
+      className={`${
+        pathname !== "/" && "hidden"
+      } flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max`}
+    >
       <div className="flex flex-col md:flex-row gap-5 md:gap-24  justify-between">
         <div className="flex  flex-col justify-between md:w-1/3">
           <div className="flex flex-col gap-2">
