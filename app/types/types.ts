@@ -36,6 +36,7 @@ export interface AppFieldProps {
   select?: boolean;
   options?: string[];
   selectHolder?: string;
+  error?: string;
 }
 
 export interface Modal {

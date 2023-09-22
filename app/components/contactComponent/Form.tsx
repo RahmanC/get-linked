@@ -12,8 +12,25 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const [teamName, setTeam] = useState("");
   const [topic, setTopic] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = React.useState({
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    if (!email) {
+      setError((prevS) => ({ ...prevS, email: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, email: "" }));
+    }
+
+    if (!message) {
+      setError((prevS) => ({ ...prevS, message: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, message: "" }));
+    }
+  };
   return (
     <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl bg-transparent p-0 md:p-[5.625rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full md:w-[38.5625rem]">
       <Link href="/">
@@ -61,6 +78,7 @@ const Form = () => {
             setText={setEmail}
             placeholder="Mail"
             type="email"
+            error={error.email}
           />
           <AppField
             name="message"
@@ -68,9 +86,10 @@ const Form = () => {
             setText={setMessage}
             placeholder="Message"
             textArea={true}
+            error={error.message}
           />
           <div className="flex items-center justify-center ">
-            <Button link="" label="Submit" />
+            <Button onClick={handleSubmit} label="Submit" />
           </div>
         </form>
       </div>

@@ -14,9 +14,61 @@ const Form = () => {
   const [teamName, setTeam] = useState("");
   const [topic, setTopic] = useState("");
   const [terms, setTerms] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [error, setError] = React.useState({
+    category: "",
+    size: "",
+    email: "",
+    phone: "",
+    teamName: "",
+    topic: "",
+    terms: "",
+  });
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    if (!email) {
+      setError((prevS) => ({ ...prevS, email: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, email: "" }));
+    }
+
+    if (!category) {
+      setError((prevS) => ({ ...prevS, category: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, category: "" }));
+    }
+
+    if (!size) {
+      setError((prevS) => ({ ...prevS, size: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, size: "" }));
+    }
+
+    if (!phone) {
+      setError((prevS) => ({ ...prevS, phone: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, phone: "" }));
+    }
+
+    if (!teamName) {
+      setError((prevS) => ({ ...prevS, teamName: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, teamName: "" }));
+    }
+
+    if (!topic) {
+      setError((prevS) => ({ ...prevS, topic: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, topic: "" }));
+    }
+
+    if (!terms) {
+      setError((prevS) => ({ ...prevS, terms: "required" }));
+    } else {
+      setError((prevS) => ({ ...prevS, terms: "" }));
+    }
+  };
   return (
     <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl bg-transparent p-0 md:p-[5.625rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full md:w-[46.25rem]">
       <p className="text-[#D434FE] hidden md:block md:w-auto text-[2rem] font-[600]">
@@ -40,6 +92,7 @@ const Form = () => {
               value={teamName}
               setText={setTeam}
               placeholder="Enter the name of your group"
+              error={error.teamName}
             />
 
             <AppField
@@ -48,6 +101,7 @@ const Form = () => {
               value={phone}
               setText={setPhone}
               placeholder="Enter your phone number"
+              error={error.phone}
             />
 
             <AppField
@@ -56,6 +110,7 @@ const Form = () => {
               value={email}
               setText={setEmail}
               placeholder="Enter your email address"
+              error={error.email}
             />
             <AppField
               label="Project Topic"
@@ -63,6 +118,7 @@ const Form = () => {
               value={topic}
               setText={setTopic}
               placeholder="What is your group project topic"
+              error={error.topic}
             />
             <AppField
               label="Category"
@@ -72,6 +128,7 @@ const Form = () => {
               setText={setCategory}
               selectHolder="Select your category"
               options={["Automation", "Software Development"]}
+              error={error.category}
             />
             <AppField
               label="Group Size"
@@ -81,6 +138,7 @@ const Form = () => {
               setText={setSize}
               selectHolder="Select"
               options={["10", "20"]}
+              error={error.size}
             />
           </div>
           <p className="text-[0.5625rem] md:text-xs text-[#FF26B9] italic font-normal mt-6 mb-4">
