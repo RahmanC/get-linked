@@ -66,7 +66,7 @@ const Privacy = () => {
       </div>
 
       <div>
-        <img src="./privacy.svg" alt="patner" />
+        <img src="/privacy.svg" alt="patner" />
       </div>
     </section>
   );

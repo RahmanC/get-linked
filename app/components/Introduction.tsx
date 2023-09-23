@@ -2,7 +2,10 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <section className="relative flex flex-col gap-12 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
+    <section
+      id="overview"
+      className="relative flex flex-col gap-12 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]"
+    >
       <div className="relative">
         <img src="/big-idea.svg" alt="getLinked" />
         <img
