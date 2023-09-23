@@ -5,9 +5,14 @@ const Rules = () => {
   return (
     <section className="relative flex flex-1 justify-center items-center  border-b border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[11.5rem] py-[1.8125rem] md:py-[3.875rem]">
       <Image src="/Purple-Lens-Flare.png" alt="lens-flare" layout="fill" />
-      <div className="z-20 flex flex-col gap-5 md:gap-24 md:flex-row-reverse items-center justify-center">
-        <img src="/guidelines.svg" alt="getLinked" />
-        <div className="md:pl-[3rem]">
+      <div className="z-20 flex flex-col-reverse gap-5 md:gap-24 md:flex-row items-center justify-center">
+        <div className="md:pl-[3rem] relative">
+          <img
+            src="/star-gray.svg"
+            alt="star"
+            className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[15%] md:top-[-15%] right-4 md:right-[30%] animate-ping-slow"
+          />
+
           <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700] ">
             Rules and <span className="text-[#D434FE]">Guidelines</span>
           </p>
@@ -20,6 +25,18 @@ const Rules = () => {
             solutions that can change the world, that's what we're all about!
           </p>
         </div>
+
+        <img
+          src="/star-white.svg"
+          alt="star"
+          className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-2 md:bottom-[30%] left-[25%] md:left-[50%] animate-ping-slow"
+        />
+        <img
+          src="/star-white.svg"
+          alt="star"
+          className="absolute md:hidden w-[8px] h-[10px]  top-[28%] left-[16%]  animate-ping-slow"
+        />
+        <img src="/guidelines.svg" alt="getLinked" />
       </div>
     </section>
   );

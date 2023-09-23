@@ -11,14 +11,12 @@ const Hero = () => {
         <img
           src="./star-white.svg"
           alt="star"
-          width={26}
-          height={32}
-          className="absolute top-[18%] left-[9%]"
+          className="absolute w-3 h-3 md:w-7 md:h-8 top-[10%] left-[36%] md:top-[18%] md:left-[9%] animate-ping-slow"
         />
         <img
           src="./ignite.png"
           height={57}
-          className="flex self-center md:self-end w-[20.25rem] md:w-[46.375rem] md:me-[3.4375rem]"
+          className="flex self-center md:self-end w-[20.25rem] md:w-[46.375rem] md:me-[3.4375rem] animate-slideLeftToRight"
         />
         <div className="z-20 flex flex-col md:flex-row mt-[2.75rem] mb-[0.5625rem] md:ms-[3rem]">
           <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%]">
@@ -27,10 +25,10 @@ const Hero = () => {
                 {" "}
                 <img
                   src="./bulb.svg"
-                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem]"
+                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem] animate-slideUpCubiBezier"
                 />
               </span>
-              getinked Tech{" "}
+              getlinked Tech{" "}
               <span className="flex items-center md:gap-[6px]">
                 <span>
                   Hackathon <span className="text-[#D434FE]">1.0</span>
@@ -41,7 +39,7 @@ const Hero = () => {
                 />
                 <img
                   src="./light.svg"
-                  className="w-[2rem] h-[2rem] md:w-[5rem] md:h-[5rem]"
+                  className="w-[2rem] h-[2rem] md:w-[5rem] md:h-[5rem] animate-slideUpEaseInOut"
                 />
               </span>
             </p>
@@ -85,18 +83,14 @@ const Hero = () => {
             <img
               src="./star-gray.svg"
               alt="star"
-              width={26}
-              height={32}
-              className="hidden md:block absolute top-[2%] left-[2%]"
+              className="hidden  md:w-7 md:h-8 md:block absolute top-[2%] animate-ping-slow left-[2%]"
             />
             <img
               src="./star-gray.svg"
               alt="star"
-              width={26}
-              height={32}
-              className="hidden md:block absolute bottom-[30%] left-[-72%]"
+              className="hidden md:w-7 md:h-8 md:block absolute bottom-[30%] left-[-72%] animate-ping-slow "
             />
-            <img src="./man_hero.png" className="md:w-full" />
+            <img src="./man_hero.png" className="md:w-full animate-fadeIn" />
           </div>
         </div>
       </div>
