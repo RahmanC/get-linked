@@ -28,7 +28,7 @@ const Hero = () => {
           className="flex self-center md:self-end w-[20.25rem] md:w-[46.375rem] md:me-[3.4375rem] animate-slideLeftToRight"
         />
         <div className="z-20 flex flex-col md:flex-row mt-[2.75rem] mb-[0.5625rem] md:mb-0 md:ms-[3rem]">
-          <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%] ">
+          <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%] animate-slideUpCubiBezier ">
             <p className="relative flex flex-col items-center md:items-start text-[2rem] md:text-[4rem] font-[700]">
               <span className="absolute top-[-10%] md:top-[-25%] right-[2.9rem] md:right-[10.5rem]">
                 {" "}
@@ -101,7 +101,10 @@ const Hero = () => {
               alt="star"
               className="hidden md:w-7 md:h-8 md:block absolute bottom-[30%] left-[-72%] animate-ping-slow "
             />
-            <img src="./man_hero.png" className="md:w-full animate-fadeIn" />
+            <img
+              src="./man_hero.png"
+              className="md:w-full animate-slideUpEaseInOut"
+            />
           </div>
         </div>
       </div>

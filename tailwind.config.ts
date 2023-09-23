@@ -29,6 +29,7 @@ const config: Config = {
         slideUp: "slideUp 0.5s",
         slideUpEaseInOut: "slideUp 0.5s ease-in-out",
         slideUpCubiBezier: "slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
+        slideDownCubiBezier: "slideDown 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
         slideLeftToRight: "slideLeftToRight 1s ease-in-out",
         slideRightToLeft: "slideRightToLeft 1s ease-in-out",
       },

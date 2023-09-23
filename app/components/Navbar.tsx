@@ -45,20 +45,17 @@ export default function Navbar() {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-2 md:py-1 md:block">
-            <ScrollLink to="/">
-              <div
-                className={`${
-                  navbar && "hidden"
-                } container flex items-center space-x-2 cursor-pointer`}
-              >
-                <Image
-                  src="/logo.png"
-                  width={100}
-                  height={30}
-                  alt="getLinked"
-                />
-              </div>
-            </ScrollLink>
+            <Link
+              href="/"
+              className={`${
+                navbar && "hidden"
+              } container flex items-center space-x-2 cursor-pointer`}
+            >
+              <p className="text-[2rem] font-[900]">
+                get<span className="text-[#D434FE]">linked</span>
+              </p>
+            </Link>
+
             <div className="md:hidden ">
               <div
                 className="p-2  text-gray-700 rounded-md outline-none cursor-pointer"
