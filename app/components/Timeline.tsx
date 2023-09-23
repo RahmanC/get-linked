@@ -1,16 +1,8 @@
 "use client";
 
-import { useState } from "react";
-
 import { timelineMock } from "@/mock/data";
 
 const Timeline = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleItemClick = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
     <section className=" flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
       <div>
@@ -28,19 +20,19 @@ const Timeline = () => {
             <div className="flex gap-4 md:block">
               <div key={index} className=" flex flex-col  items-center">
                 <div className=" w-1 bg-[#D434FE] h-[77px] md:h-[86px] my-3"></div>
-                <div className="flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE]">
+                <div className="md:hidden flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE]">
                   {index + 1}
                 </div>
               </div>
 
               <div
                 key={index}
-                className={`flex flex-col justify-between gap-[2.5rem] md:gap-[7rem] text-[0.75rem]  md:w-full  ${
+                className={`flex flex-col justify-between items-center gap-[2.5rem] md:gap-[7rem] text-[0.75rem]  md:w-full  ${
                   even ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
                 <div
-                  className={`flex flex-col justify-between text-start gap-2 md:w-1/2 md:gap-3 ${
+                  className={`flex flex-col justify-between text-start gap-2 md:w-[40%] md:gap-3  ${
                     even ? "md:text-end" : "md:text-start"
                   }`}
                 >
@@ -54,8 +46,11 @@ const Timeline = () => {
                     {item.date}
                   </p>
                 </div>
+                <div className="hidden md:flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE]">
+                  {index + 1}
+                </div>
                 <div
-                  className={`hidden md:block text-start md:w-1/2 ${
+                  className={`hidden md:block text-start md:w-[40%] ${
                     even ? "md:text-start" : "md:text-end"
                   }`}
                 >
