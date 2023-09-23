@@ -3,8 +3,17 @@ import React from "react";
 
 const Rules = () => {
   return (
-    <section className="relative flex flex-1 justify-center items-center  border-b border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[11.5rem] py-[1.8125rem] md:py-[3.875rem]">
-      <Image src="/Purple-Lens-Flare.png" alt="lens-flare" layout="fill" />
+    <section className="relative flex flex-1 justify-center items-center bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[11.5rem] py-[1.8125rem] md:py-[3.875rem]">
+      <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute top-0 left-[-10%] opacity-[58%] "
+      />
+      <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute hidden md:block bottom-[-40%] right-[-40%]   opacity-[30%]"
+      />
       <div className="z-20 flex flex-col-reverse gap-5 md:gap-24 md:flex-row items-center justify-center">
         <div className="md:pl-[3rem] relative">
           <img

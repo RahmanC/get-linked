@@ -14,7 +14,7 @@ const Footer = () => {
     <section
       className={`${
         pathname !== "/" && "hidden"
-      } relative flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max`}
+      } relative flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[7rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max bg-[#100B20]`}
     >
       <img
         src="/star-white.svg"

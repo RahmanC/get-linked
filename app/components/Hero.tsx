@@ -4,8 +4,17 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <main className="relative flex flex-1 justify-center items-center min-h-screen mt-[6rem] md:mt-4  min-w-screen">
-      <Image src="/Purple-Lens-Flare.png" alt="lens-flare" layout="fill" />
+    <main className="relative flex flex-1 justify-center items-center min-h-max mt-[6rem] md:mt-[8%]  min-w-screen">
+      <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute top-[-20%] left-1 opacity-[58%]  "
+      />
+      <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute top-[10%] right-[-20%] opacity-[28%] z-50 "
+      />
 
       <div className="flex flex-col mt-[2rem]">
         <img
@@ -18,8 +27,8 @@ const Hero = () => {
           height={57}
           className="flex self-center md:self-end w-[20.25rem] md:w-[46.375rem] md:me-[3.4375rem] animate-slideLeftToRight"
         />
-        <div className="z-20 flex flex-col md:flex-row mt-[2.75rem] mb-[0.5625rem] md:ms-[3rem]">
-          <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%]">
+        <div className="z-20 flex flex-col md:flex-row mt-[2.75rem] mb-[0.5625rem] md:mb-0 md:ms-[3rem]">
+          <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%] ">
             <p className="relative flex flex-col items-center md:items-start text-[2rem] md:text-[4rem] font-[700]">
               <span className="absolute top-[-10%] md:top-[-25%] right-[2.9rem] md:right-[10.5rem]">
                 {" "}
@@ -47,7 +56,9 @@ const Hero = () => {
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
+
             <Button label="Register" link="/register" />
+
             <div className="text-center">
               <div className="flex gap-4">
                 <span className="relative">

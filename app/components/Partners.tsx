@@ -4,6 +4,16 @@ const Partners = () => {
   return (
     <section className="relative flex flex-col gap-5 md:gap-24 items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem]">
       <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute top-[-20%] left-[-15%] object-cover opacity-[30%]  "
+      />
+      <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute hidden md:block bottom-[-50%] right-[-30%] opacity-[28%]  "
+      />
+      <img
         src="/star-dark.svg"
         alt="star"
         className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[40%] md:top-[25%] left-[16%] md:left-[16%] animate-ping-slow"

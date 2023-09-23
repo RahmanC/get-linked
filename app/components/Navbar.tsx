@@ -40,7 +40,7 @@ export default function Navbar() {
     <header
       className={`${
         pathname !== "/" && "hidden md:block"
-      } w-full px-[2.5rem] md:px-auto py-[2.124rem] md:py-[2.124rem]  sm:px-20 fixed top-0 z-30 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] `}
+      } w-full max-w-screen overflow-x-hidden px-[2.5rem] md:px-auto py-[2.124rem] md:py-[2.124rem]  sm:px-20 fixed top-0 z-50 bg-[#150E28] border-b border-[#ffffff] border-opacity-[18%] `}
     >
       <div className="justify-between md:items-center md:flex">
         <div>

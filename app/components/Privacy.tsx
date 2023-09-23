@@ -6,6 +6,11 @@ const Privacy = () => {
   return (
     <section className="relative flex flex-col md:flex-row gap-5 md:gap-24 items-center justify-center  border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem]">
       <img
+        src="/bg-blur.png"
+        alt="lens-flare"
+        className="absolute bottom-[-10%] left-[-30%] opacity-[28%]  "
+      />
+      <img
         src="/star-gray.svg"
         alt="star"
         className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[20%] md:top-[14%] left-[16%] md:left-[34%] animate-ping-slow"

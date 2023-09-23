@@ -22,7 +22,7 @@ export const AppField: FC<AppFieldProps> = ({
       return (
         <div className="flex flex-col gap-3">
           <textarea
-            className={` form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]   bg-inherit rounded-[4px] text-[#ffffff] text-base h-[7.4375rem] ${
+            className={` form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]  bg-[#ffffff] bg-opacity-[3%] rounded-[4px] text-[#ffffff] text-base h-[7.4375rem] ${
               error && "border-red-500"
             }`}
             value={value}
@@ -45,7 +45,7 @@ export const AppField: FC<AppFieldProps> = ({
             </label>
           )}
           <select
-            className={`form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]   bg-inherit rounded-[4px] text-[#ffffff] text-xs md:text-sm ${
+            className={`form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]   bg-[#ffffff] bg-opacity-[3%] rounded-[4px] text-[#ffffff] text-xs md:text-sm ${
               error && "border-red-500"
             }`}
             value={value}
@@ -75,7 +75,7 @@ export const AppField: FC<AppFieldProps> = ({
             </label>
           )}
           <input
-            className={`form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]   bg-inherit rounded-[4px] text-[#ffffff] text-xs md:text-sm ${
+            className={`form-control w-[100%] py-3 px-7 border border-[#ffffff] outline-none flex gap-[1.2rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]   bg-[#ffffff] bg-opacity-[3%] rounded-[4px] text-[#ffffff] text-xs md:text-sm ${
               error && "border-red-500"
             }`}
             type={type}

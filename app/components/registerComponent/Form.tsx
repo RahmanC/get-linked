@@ -109,7 +109,7 @@ const Form = () => {
     }
   };
   return (
-    <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl bg-transparent p-0 md:p-[5.625rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full md:w-[46.25rem]">
+    <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl md:bg-[#ffffff] md:bg-opacity-[3%] p-0 md:p-[5.125rem] md:my-4 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full ">
       <p className="text-[#D434FE] hidden md:block md:w-auto text-[2rem] font-[600]">
         Register
       </p>
