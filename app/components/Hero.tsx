@@ -30,11 +30,11 @@ const Hero = () => {
         <div className="z-20 flex flex-col md:flex-row mt-[2.75rem] mb-[0.5625rem] md:mb-0 md:ms-[3rem]">
           <div className="flex flex-col items-center md:items-start px-[2rem] md:w-[60%] animate-slideUpCubiBezier ">
             <p className="relative flex flex-col items-center md:items-start text-[2rem] md:text-[4rem] font-[700]">
-              <span className="absolute top-[-10%] md:top-[-25%] right-[2.9rem] md:right-[10.5rem]">
+              <span className="absolute top-[-10%] md:top-[-25%] right-[2.8rem] md:right-[10.4rem]">
                 {" "}
                 <img
                   src="./bulb.svg"
-                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem] animate-slideUpCubiBezier"
+                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem] animate-bounce"
                 />
               </span>
               getlinked Tech{" "}
