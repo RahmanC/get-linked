@@ -62,7 +62,7 @@ const Hero = () => {
             <img
               src="/timer.svg"
               alt="countdown"
-              className="w-[220px] h-[64px] md:w-auto md:h-auto"
+              className="w-[220px] h-[64px] md:w-auto md:h-auto animate-blink"
             />
           </div>
           <div className="relative md:w-[40%]">
