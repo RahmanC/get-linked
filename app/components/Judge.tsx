@@ -4,7 +4,17 @@ import { criteriaMock } from "@/mock/data";
 
 const Judge = () => {
   return (
-    <section className="flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
+    <section className="relative flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
+      <img
+        src="/star-dark.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[3%] md:top-[5%] left-[45%] md:left-[13%] animate-ping-slow"
+      />
+      <img
+        src="/star-white.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[5%] md:bottom-[8%] left-[90%] md:left-[52%] animate-ping-slow"
+      />
       <img src="/criteria.svg" alt="getLinked" />
       <div className="flex flex-col items-center md:items-start">
         <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700]">

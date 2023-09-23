@@ -14,8 +14,28 @@ const Footer = () => {
     <section
       className={`${
         pathname !== "/" && "hidden"
-      } flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max`}
+      } relative flex flex-col items-start md:items-center gap-8 md:gap-14  justify-between  px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem] text-xs font-[400] min-h-max`}
     >
+      <img
+        src="/star-white.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[20%] md:top-[35%] left-[16%] md:left-[2%] animate-ping-slow"
+      />
+      <img
+        src="/star-gray.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[40%] md:top-[15%] right-[36%] md:right-[20%] animate-ping-slow"
+      />
+      <img
+        src="/star-dark.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[20%] md:bottom-[30%] left-[45%] md:left-[45%] animate-ping-slow"
+      />
+      <img
+        src="/star-white.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[20%] md:bottom-[40%] right-[5%] md:right-[5%] animate-ping-slow"
+      />
       <div className="flex flex-col md:flex-row gap-5 md:gap-24  justify-between">
         <div className="flex  flex-col justify-between md:w-1/3">
           <div className="flex flex-col gap-2">

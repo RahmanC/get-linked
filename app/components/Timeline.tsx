@@ -4,7 +4,22 @@ import { timelineMock } from "@/mock/data";
 
 const Timeline = () => {
   return (
-    <section className=" flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
+    <section className="relative flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-auto py-[1.8125rem] md:py-[3.875rem]">
+      <img
+        src="/star-dark.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[22%] md:top-[14%] left-[23%] md:left-[20%] animate-ping-slow"
+      />
+      <img
+        src="/star-white.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[56%] md:top-[49%] right-[18%] md:right-[13%] animate-ping-slow"
+      />
+      <img
+        src="/star-gray.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[3%] md:bottom-[6%] left-[3%] md:left-[10%] animate-ping-slow"
+      />
       <div>
         <div className="flex flex-col items-center text-center mb-[5.6875rem] gap-3">
           <p className="text-[2rem] font-[700]">Timeline</p>

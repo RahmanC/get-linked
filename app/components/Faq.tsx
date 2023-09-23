@@ -11,7 +11,17 @@ const Faq = () => {
     setActiveFaq(faq);
   };
   return (
-    <section className="flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem]">
+    <section className="relative flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem]">
+      <img
+        src="/star-dark.svg"
+        alt="star"
+        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[3%] md:top-[3%] left-[15%] md:left-[5%] animate-ping-slow"
+      />
+      <img
+        src="/question.svg"
+        alt="star"
+        className="absolute w-[192px] h-[52px] md:w-auto md:h-auto top-[66%] md:top-[3%] right-[35%] md:right-[15%] animate-bounce"
+      />
       <div className="flex flex-col items-center md:items-start">
         <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700]">
           Frequently Ask <span className="text-[#D434FE]">Question</span>
@@ -33,7 +43,9 @@ const Faq = () => {
           ))}
         </div>
       </div>
-      <img src="/faq.svg" alt="getLinked" />
+      <div className="md:w-1/2">
+        <img src="/faq2.svg" alt="getLinked" />
+      </div>
     </section>
   );
 };
