@@ -52,9 +52,6 @@ export default function Navbar() {
                 navbar && "hidden"
               } container flex items-center space-x-2 cursor-pointer`}
             >
-              {/* <p className="text-[2rem] font-[900]">
-                get<span className="text-[#D434FE]">linked</span>
-              </p> */}
               <img
                 src="/logo.png"
                 alt="getlinked"

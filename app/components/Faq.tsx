@@ -5,11 +5,12 @@ import { Criteria } from "@/types/types";
 import FaqItem from "./FaqItem";
 
 const Faq = () => {
-  const [activeFaq, setActiveFaq] = useState(0);
+  const [activeFaq, setActiveFaq] = useState(-1);
 
-  const switchFaq = (faq: number) => {
-    setActiveFaq(faq);
+  const switchFaq = (index: number) => {
+    setActiveFaq(activeFaq === index ? -1 : index);
   };
+
   return (
     <section className="relative flex flex-col gap-5 md:gap-24 md:flex-row items-center justify-center border-b border-t border-[#ffffff] border-opacity-[18%] px-[2.5rem] md:px-[5rem] py-[1.8125rem] md:py-[3.875rem]">
       <img
@@ -33,9 +34,8 @@ const Faq = () => {
         <div className="flex items-start flex-col gap-y-8 mt-8">
           {faqMock.map((faq: Criteria, index: number) => (
             <FaqItem
-              switchFaq={(tab: number) => switchFaq(tab)}
-              activeFaq={activeFaq}
-              index={index}
+              switchFaq={() => switchFaq(index)}
+              active={activeFaq === index}
               key={index}
               label={faq.label}
               value={faq.value}

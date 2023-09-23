@@ -18,9 +18,8 @@ export interface Criteria {
 }
 
 export interface FaqItem {
-  switchFaq: (faq: number) => void;
-  activeFaq: number;
-  index: number;
+  switchFaq: () => void;
+  active: boolean;
   label: string;
   value: string;
 }

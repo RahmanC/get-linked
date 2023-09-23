@@ -34,8 +34,8 @@ const Timeline = () => {
           return (
             <div className="flex gap-4 md:block">
               <div key={index} className=" flex flex-col  items-center">
-                <div className=" w-1 bg-[#D434FE] h-[77px] md:h-[86px] my-3"></div>
-                <div className="md:hidden flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE]">
+                <div className=" w-1 bg-[#D434FE] h-[77px] md:h-[86px] my-3 animate-slideUp"></div>
+                <div className="md:hidden flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE] animate-fadeIn">
                   {index + 1}
                 </div>
               </div>
@@ -51,17 +51,17 @@ const Timeline = () => {
                     even ? "md:text-end" : "md:text-start"
                   }`}
                 >
-                  <p className="font-[700] md:text-[1.5rem] text-[#D434FE]">
+                  <p className="font-[700] md:text-[1.5rem] text-[#D434FE] animate-slideUpEaseInOut">
                     {item.label}
                   </p>
-                  <p className="font-[400] md:text-[0.875rem] text-[#ffffff]">
+                  <p className="font-[400] md:text-[0.875rem] text-[#ffffff] animate-slideUpCubiBezier">
                     {item.value}
                   </p>
-                  <p className="md:hidden font-[700] md:text-[1.5rem] text-[#D434FE]">
+                  <p className="md:hidden font-[700] md:text-[1.5rem] text-[#D434FE] animate-slideUp">
                     {item.date}
                   </p>
                 </div>
-                <div className="hidden md:flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE]">
+                <div className="hidden md:flex items-center justify-center text-[#ffffff] text-[0.75rem] md:text-[1.5rem] font-[700] w-[1.2075rem] h-[1.2075rem] md:w-[3.3125rem] md:h-[3.3125rem] rounded-full bg-[#D434FE] animate-fadeIn">
                   {index + 1}
                 </div>
                 <div
