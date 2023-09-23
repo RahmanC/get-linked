@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && vercel && vercel --prod",
     "start": "next start",
-    "lint": "next lint",
-    "vercel": "vercel && vercel --prod"
+    "lint": "next lint"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",

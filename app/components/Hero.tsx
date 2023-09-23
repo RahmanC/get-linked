@@ -9,6 +9,13 @@ const Hero = () => {
 
       <div className="flex flex-col mt-[2rem]">
         <img
+          src="./star-white.svg"
+          alt="star"
+          width={26}
+          height={32}
+          className="absolute top-[18%] left-[9%]"
+        />
+        <img
           src="./ignite.png"
           height={57}
           className="flex self-center md:self-end w-[20.25rem] md:w-[46.375rem] md:me-[3.4375rem]"
@@ -74,7 +81,23 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <img src="./man_hero.png" className="md:w-[40%]" />
+          <div className="relative md:w-[40%]">
+            <img
+              src="./star-gray.svg"
+              alt="star"
+              width={26}
+              height={32}
+              className="hidden md:block absolute top-[2%] left-[2%]"
+            />
+            <img
+              src="./star-gray.svg"
+              alt="star"
+              width={26}
+              height={32}
+              className="hidden md:block absolute bottom-[30%] left-[-72%]"
+            />
+            <img src="./man_hero.png" className="md:w-full" />
+          </div>
         </div>
       </div>
     </main>
