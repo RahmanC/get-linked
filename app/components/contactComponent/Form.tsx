@@ -75,8 +75,12 @@ const Form = () => {
   };
   return (
     <div className="md:border border-[#ffffff] border-opacity-[3%] rounded-xl md:bg-[#ffffff] md:bg-opacity-[3%] p-0 md:p-[5.625rem] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] w-full md:w-[38.5625rem]">
-      <Link href="/">
-        <img src="/back.svg" alt="go back" className="md:hidden mb-8" />
+      <Link href="/" className="z-50">
+        <img
+          src="/back.svg"
+          alt="go back"
+          className="md:hidden mb-8 cursor-pointer "
+        />
       </Link>
       <p className="text-[#D434FE] w-[197px] md:w-auto text-xl font-[600]">
         Questions or need assistance?

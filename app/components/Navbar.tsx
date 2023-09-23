@@ -45,20 +45,26 @@ export default function Navbar() {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-2 md:py-1 md:block">
+            <div className="md:hidden"></div>
             <Link
               href="/"
               className={`${
                 navbar && "hidden"
               } container flex items-center space-x-2 cursor-pointer`}
             >
-              <p className="text-[2rem] font-[900]">
+              {/* <p className="text-[2rem] font-[900]">
                 get<span className="text-[#D434FE]">linked</span>
-              </p>
+              </p> */}
+              <img
+                src="/logo.png"
+                alt="getlinked"
+                className="w-[72px] h-[18px] md:w-auto md:h-auto"
+              />
             </Link>
 
-            <div className="md:hidden ">
+            <div className="md:hidden  ">
               <div
-                className="p-2  text-gray-700 rounded-md outline-none cursor-pointer"
+                className="p-2   rounded-md outline-none cursor-pointer "
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -71,10 +77,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className=" bg-[#150E28] px-[2rem] md:px-0 rounded-[8px]">
+        <div className=" bg-[#150E28] px-[2rem] md:px-0 rounded-[8px] ">
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
+              navbar ? "block animate-slideUpEaseInOut" : "hidden"
             } `}
           >
             <div className="items-start md:items-center justify-center space-y-8 flex flex-col  md:flex-row md:space-x-[3.5rem] md:space-y-0 cursor-pointer">

@@ -8,7 +8,7 @@ const Contact = () => {
       <img
         src="/bg-blur.png"
         alt="lens-flare"
-        className="absolute top-0 left-[-20%] opacity-[38%] "
+        className="absolute top-0 right-[-20%] md:left-[-20%] opacity-[38%] "
       />
       <img
         src="/bg-blur.png"

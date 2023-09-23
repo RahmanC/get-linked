@@ -13,10 +13,10 @@ const Hero = () => {
       <img
         src="/bg-blur.png"
         alt="lens-flare"
-        className="absolute top-[10%] right-[-20%] opacity-[28%] z-50 "
+        className="absolute top-[10%] right-[-20%] opacity-[28%]  "
       />
 
-      <div className="flex flex-col mt-[2rem]">
+      <div className="flex flex-col mt-[3rem] md:mt-[2rem]">
         <img
           src="./star-white.svg"
           alt="star"
@@ -59,36 +59,11 @@ const Hero = () => {
 
             <Button label="Register" link="/register" />
 
-            <div className="text-center">
-              <div className="flex gap-4">
-                <span className="relative">
-                  <span className="text-[3rem] md:text-[4rem] font-[400]">
-                    00
-                  </span>
-                  <sub className="text-[0.875rem] absolute bottom-[1.65rem] left-[3.85rem] md:bottom-[1.95rem] md:left-[4.95rem]">
-                    H
-                  </sub>
-                </span>
-
-                <span className="relative">
-                  <span className="text-[3rem] md:text-[4rem] font-[400]">
-                    00
-                  </span>
-                  <sub className="text-[0.875rem] absolute bottom-[1.65rem] left-[3.85rem] md:bottom-[1.95rem] md:left-[4.95rem]">
-                    M
-                  </sub>
-                </span>
-
-                <span className="relative">
-                  <span className="text-[3rem] md:text-[4rem] font-[400]">
-                    00
-                  </span>
-                  <sub className="text-[0.875rem] absolute bottom-[1.65rem] left-[3.85rem] md:bottom-[1.95rem] md:left-[4.95rem]">
-                    S
-                  </sub>
-                </span>
-              </div>
-            </div>
+            <img
+              src="/timer.svg"
+              alt="countdown"
+              className="w-[220px] h-[64px] md:w-auto md:h-auto"
+            />
           </div>
           <div className="relative md:w-[40%]">
             <img
