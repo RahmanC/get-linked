@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src="./star-white.svg"
           alt="star"
-          className="absolute w-3 h-3 md:w-7 md:h-8 top-[10%] left-[36%] md:top-[18%] md:left-[9%] animate-ping-slow"
+          className="absolute w-3 h-3 md:w-4 md:h-4 top-[10%] left-[36%] md:top-[18%] md:left-[9%] "
         />
         <img
           src="./ignite.png"
@@ -34,7 +34,7 @@ const Hero = () => {
                 {" "}
                 <img
                   src="./bulb.svg"
-                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem] animate-bounce"
+                  className="w-[1.125rem] h-[1.625rem] md:w-[5rem] md:h-[5rem]"
                 />
               </span>
               getlinked Tech{" "}
@@ -69,12 +69,12 @@ const Hero = () => {
             <img
               src="./star-gray.svg"
               alt="star"
-              className="hidden  md:w-7 md:h-8 md:block absolute top-[2%] animate-ping-slow left-[2%]"
+              className="hidden  md:w-4 md:h-4 md:block absolute top-[2%]  left-[2%]"
             />
             <img
               src="./star-gray.svg"
               alt="star"
-              className="hidden md:w-7 md:h-8 md:block absolute bottom-[30%] left-[-72%] animate-ping-slow "
+              className="hidden md:w-4 md:h-4 md:block absolute bottom-[30%] left-[-72%]  "
             />
             <img
               src="./man_hero.png"

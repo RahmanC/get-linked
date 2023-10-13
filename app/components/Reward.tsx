@@ -16,32 +16,32 @@ const Reward = () => {
       <img
         src="/star-dark.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[22%] md:top-[14%] left-[23%] md:left-[20%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[22%] md:top-[14%] left-[23%] md:left-[20%] "
       />
       <img
         src="/star-dark.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[22%] md:top-[19%] right-[23%] md:right-[9%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[22%] md:top-[19%] right-[23%] md:right-[9%] "
       />
       <img
         src="/star-white.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[56%] md:top-[35%] right-[18%] md:right-[47%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[56%] md:top-[35%] right-[18%] md:right-[47%] "
       />
       <img
         src="/star-white.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[56%] md:top-[43%] right-[18%] md:right-[5%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[56%] md:top-[43%] right-[18%] md:right-[5%] "
       />
       <img
         src="/star-white.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[3%] md:bottom-[2%] right-[3%] md:right-[25%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] bottom-[3%] md:bottom-[2%] right-[3%] md:right-[25%] "
       />
       <img
         src="/star-white.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[3%] md:bottom-[4%] left-[3%] md:left-[15%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] bottom-[3%] md:bottom-[4%] left-[3%] md:left-[15%] "
       />
       <div className="flex flex-col self-end">
         <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700]">

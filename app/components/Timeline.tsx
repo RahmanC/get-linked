@@ -11,17 +11,17 @@ const Timeline = () => {
       <img
         src="/star-dark.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[22%] md:top-[14%] left-[23%] md:left-[20%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[22%] md:top-[14%] left-[23%] md:left-[20%] "
       />
       <img
         src="/star-white.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[56%] md:top-[49%] right-[18%] md:right-[13%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[56%] md:top-[49%] right-[18%] md:right-[13%] "
       />
       <img
         src="/star-gray.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[3%] md:bottom-[6%] left-[3%] md:left-[10%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] bottom-[3%] md:bottom-[6%] left-[3%] md:left-[10%] "
       />
       <div>
         <div className="flex flex-col items-center text-center mb-[5.6875rem] gap-3">

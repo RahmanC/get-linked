@@ -13,12 +13,12 @@ const Privacy = () => {
       <img
         src="/star-gray.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[20%] md:top-[14%] left-[16%] md:left-[34%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[20%] md:top-[14%] left-[16%] md:left-[34%] "
       />
       <img
         src="/star-dark.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] bottom-[20%] md:bottom-[20%] left-0 md:left-6 animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] bottom-[20%] md:bottom-[20%] left-0 md:left-6 animate-ping-slow"
       />
       <div className="flex flex-col items-center md:items-start md:w-[28.25rem]">
         <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700]">

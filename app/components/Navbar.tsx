@@ -5,7 +5,6 @@ import { Link as ScrollLink } from "react-scroll/modules";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import Image from "next/image";
 import { NavItem } from "../types/types";
 import Button from "./Button";
 

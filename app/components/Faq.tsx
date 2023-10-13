@@ -19,7 +19,7 @@ const Faq = () => {
       <img
         src="/star-dark.svg"
         alt="star"
-        className="absolute w-[8px] h-[10px] md:w-[26px] md:h-[32px] top-[3%] md:top-[3%] left-[15%] md:left-[5%] animate-ping-slow"
+        className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[3%] md:top-[3%] left-[15%] md:left-[5%] "
       />
       <img
         src="/question.svg"

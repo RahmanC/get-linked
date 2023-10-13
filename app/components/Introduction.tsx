@@ -11,7 +11,7 @@ const Introduction = () => {
         <img
           src="/arrow.svg"
           alt="arrow"
-          className="absolute w-[19px] h-[23px] md:w-[49px] md:h-[57px] bottom-[-2%] md:bottom-[-5%] right-[49%] md:right-[-10%] animate-ping-slow"
+          className="absolute w-[19px] h-[23px] md:w-[39px] md:h-[37px] bottom-[-2%] md:bottom-[-5%] right-[49%] md:right-[-10%] "
         />
       </div>
 
@@ -19,7 +19,7 @@ const Introduction = () => {
         <img
           src="/star-dark.svg"
           alt="arrow"
-          className="absolute w-[8px] h-[10px] md:w-[30px] md:h-[36px] top-[15%] md:top-[10%] right-4 md:right-0 animate-ping-slow"
+          className="absolute w-[8px] h-[10px] md:w-[10px] md:h-[16px] top-[15%] md:top-[10%] right-4 md:right-0 animate-ping-slow"
         />
         <p className="flex flex-col items-center md:items-start text-[1.25rem] md:text-[2rem] font-[700]">
           Introduction to getlinked{" "}
